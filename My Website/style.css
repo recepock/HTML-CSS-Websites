@@ -1,0 +1,398 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+.marka h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.marka h1 span {
+	color: crimson;
+}
+
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: fit-content;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: .3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul li:hover a {
+	color: crimson;
+}
+#Anasayfa {
+	background-image: url(./img/silüet.JPG);
+	background-size: 100%;
+	background-position: center;
+	position: static;
+}
+#Anasayfa .Anasayfa {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#Anasayfa h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: white;
+}
+
+#Deneyimler .Deneyimler {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#Deneyimler .Deneyimler-ust {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#Deneyimler .Deneyimler-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#Deneyimler .Deneyimler-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/webdesign-3411373.jpg);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#Deneyimler .Deneyimler-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: .9;
+	z-index: -1;
+}
+#Deneyimler .Deneyimler-bottom .simge {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#Deneyimler .Deneyimler-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#Deneyimler .Deneyimler-item p {
+	color: white;
+	text-align: left;
+}
+
+#Yetenekler .Yetenekler {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#Yetenekler .Yetenekler-header h1 {
+	margin-bottom: 50px;
+}
+#Yetenekler .Yetenekler-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+}
+#Yetenekler .Yetenekler-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	color: white;
+}
+#Yetenekler .Yetenekler-info h1 {
+	font-size: 4rem;
+	font-weight: 500;
+}
+#Yetenekler .Yetenekler-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+#Yetenekler .Yetenekler-info p {
+	color: white;
+}
+#Yetenekler .Yetenekler-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+}
+
+#about .about {
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#about .col-right {
+	width: 100%;
+}
+#about .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	margin-bottom: 10px;
+}
+#about .col-left{
+	background: url(images/shadow.gif) no-repeat bottom right;
+    clear: right;
+    float: left;
+    position: relative;
+}
+#about .col-left .about-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+	background-color: #fff;
+    border: 4px solid crimson;
+    padding: 4px;
+    display: block;
+    margin: -5px 5px 5px -5px;
+}
+
+#Iletişim .Iletişim-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 0 #0000002c;
+	transition: .5s ease box-shadow;
+}
+#Iletişim .Iletişim-item:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#Iletişim .Iletişim-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#Iletişim .Iletişim-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+#footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#footer .social-simge {
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: .3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+
+@media only screen and (min-width: 768px) {
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	#Anasayfa h1 {
+		font-size: 7rem;
+	}
+
+	#Deneyimler .Deneyimler-bottom .Deneyimler-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+
+	#Yetenekler .Yetenekler-item {
+		flex-direction: row;
+	}
+	#Yetenekler .Yetenekler-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#Yetenekler .Yetenekler-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#Yetenekler .all-Yetenekler .Yetenekler-info {
+		height: 100%;
+	}
+	#Yetenekler .all-Yetenekler .Yetenekler-img {
+		height: 100%;
+	}
+
+	#about .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+
+	#Iletişim .Iletişim {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+	}
+	#Iletişim .Iletişim-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	#Iletişim .Iletişim-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#Iletişim .Iletişim-item .simge {
+		height: 100px;
+		width: 100px;
+	}
+	#Iletişim .Iletişim-item .Iletişim-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	#header .ust-serit {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+
+	#Deneyimler .Deneyimler-bottom .Deneyimler-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
