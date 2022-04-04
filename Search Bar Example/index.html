@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Arama Cubugu</title>
+</head>
+<body onload="realtimeClock()">
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#">A.R.O</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">A.R.O</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="#">ANA SAYFA</a></li>
+          <li>
+            <a href="#">GEÇMİŞ</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href='https://www.udemy.com'>UDEMY</a></li>
+              <li><a href='https://www.mehsatek.com/css-kodlari'>CSS TERİMLERİ</a></li>
+              <li><a href='https://www.mehsatek.com/html-kodlari'>HTML TERİMLERİ</a></li>
+              <li class="more">
+                <span><a href="#">DEVAMI</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href='https://unity3d.com/get-unity/download'>Unity İndir</a></li>
+                  <li><a href='https://code.visualstudio.com/download'>VS Code İndir</a></li>
+                  <li><a href='https://open.spotify.com'>Spotify</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">OYUNLAR</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href='https://agar.io'>AGAR.İO</a></li>
+              <li><a href='http://slither.io'>SLITHER.IO</a></li>
+              <li><a href='https://gartic.io'>GARTIC.IO</a></li>
+              <li><a href='https://www.blankmediagames.com/TownOfSalem'>TOWN OF SALEM</a></li>
+            </ul>
+          </li>
+          <li><a href="#">YER İMLERİ</a></li>
+          <li><a href="#">AYARLAR</a></li>
+        </ul>
+      </div>
+      <div class="main-container">
+        <div id="clock">
+        </div>
+      </div>
+      </div>
+    </div>
+  </nav>
+    <div class="search-box">
+        <input class="query" type="text" name="" placeholder="Arama Yapın" value="">
+        <a href="#" class="aramaBtn">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+    <script>
+        let query = document.querySelector('.query');
+        let aramaBtn = document.querySelector('.aramaBtn');
+
+        aramaBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url);
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
