@@ -1,0 +1,666 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.Hakkımızda, .Kalitemiz, .Ürünümüz, .İletişim, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.Hakkımızda .Hakkımızda-content, 
+.Kalitemiz .serv-content,
+.Ürünümüz .Ürünümüz-content,
+.İletişim .İletişim-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #B35900;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background:	#B35900;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #B35900;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #B35900;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(50%);
+}
+
+  
+
+.Anasayfa{
+    display: flex;
+    background: url("images/Adsız\ tasarım\ \(8\).png") no-repeat center;
+    height: 100vh;
+    color: #B35900;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.Anasayfa .max-width{
+    margin: auto 0 auto 30px;
+}
+.Anasayfa .Anasayfa-content .text-1{
+    font-size: 27px;
+}
+.Anasayfa .Anasayfa-content .text-2{
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.Anasayfa .Anasayfa-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.Hakkımızda .title::after{
+    content: "Biz Kimiz";
+}
+.Hakkımızda .Hakkımızda-content .left{
+    width: 45%;
+}
+.Hakkımızda .Hakkımızda-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.Hakkımızda .Hakkımızda-content .right{
+    width: 55%;
+}
+.Hakkımızda .Hakkımızda-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Hakkımızda .Hakkımızda-content .right p{
+    text-align: justify;
+}
+
+
+.Kalitemiz{
+    color:#fff;
+    background: #545454;
+}
+.Kalitemiz .title::before{
+    background: #fff;
+}
+.Kalitemiz .title::after{
+    background: #545454;
+    content: "Sağladığımız Özellikler";
+}
+.Kalitemiz .serv-content .card1{
+    width: calc(33% - 20px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Kalitemiz .serv-content .card1:hover{
+    background: #B35900;
+}
+.Kalitemiz .serv-content .card1 .box{
+    transition: all 0.3s ease;
+}
+.Kalitemiz .serv-content .card1:hover .box{
+    transform: scale(1.05);
+}
+.Kalitemiz .serv-content .card1 i{
+    font-size: 50px;
+    color: #B35900;
+    transition: color 0.3s ease;
+}
+.Kalitemiz .serv-content .card1:hover i{
+    color: #fff;
+}
+.Kalitemiz .serv-content .card1 .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+.Ürünümüz{
+    margin: 0;
+    padding: 150px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+.Ürünümüz .title::after{
+    background: white;
+    content: "Tasarımımız";
+}
+.Ürünümüz .container {
+    width: 119rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Ürünümüz .container .card {
+    transform-style: preserve-3d;
+    min-height: 40vh;
+    width: 27rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+  
+.Ürünümüz .container .card .sneaker {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Ürünümüz .container .card .sneaker img {
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+.Ürünümüz .container .card .sneaker .circle {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+      to right,
+      rgba(245, 70, 66, 0.75),
+      rgba(8, 83, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+  
+.Ürünümüz .container .card .info h1 {
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+}
+.Ürünümüz .container .card .info h3 {
+    font-size: 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+.Ürünümüz .container .card .info .sizes {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+.Ürünümüz .container .card .info .sizes button {
+    padding: 0.5rem 2rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+}
+.Ürünümüz .container .card .info .Satın_Al {
+    margin-top: 5rem;
+    transition: all 0.75s ease-out;
+}
+.Ürünümüz .container .card .info .Satın_Al button {
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #B35900;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+  
+
+
+
+.İletişim{
+    color:#fff;
+    background: #545454;
+}
+.İletişim .title::after{
+    background: #545454;
+    content: "Bize Yazın";
+}
+.İletişim .İletişim-content .column{
+    width: calc(50% - 30px);
+}
+.İletişim .İletişim-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.İletişim .İletişim-content .left p{
+    text-align: justify;
+}
+.İletişim .İletişim-content .left .icons{
+    margin: 10px 0;
+}
+.İletişim .İletişim-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.İletişim .İletişim-content .row .info{
+    margin-left: 30px;
+}
+.İletişim .İletişim-content .row i{
+    font-size: 25px;
+    color: #B35900;
+}
+.İletişim .İletişim-content .info .head{
+    font-weight: 500;
+}
+.İletişim .İletişim-content .info .sub-title{
+    color: black;
+}
+.todolist-itemi{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+	width: 45%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 90px;
+    transition: all 0.3s ease;
+}
+.todolist-itemi .text{
+    width: 260px;
+    position: relative;
+    right: 50px;
+    bottom: 93px;
+}
+.todolist-itemi form button,
+form input{
+    position: relative;
+    bottom: 100px;
+    right: 80px;
+    align-items: top;
+	padding: 0.3rem;
+	font-size: 1.5rem;
+	border: none;
+	background: white;
+}
+.todolist-itemi form button{
+    position: relative;
+    left: 15rem;
+    bottom: 137px;
+	color: white;
+	background: black;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.todolist-itemi form button:hover{
+	background: black;
+	color: white;
+}
+.todolist-itemi .todo-container {
+    width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: relative;
+    bottom: 100px;
+    right: auto;
+    margin: 20px;
+}
+.todolist-itemi .todo-list{
+	min-width: 30%;
+	list-style: none;
+}
+.todolist-itemi .todo{
+	margin: 0.5;
+	color: white;
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.5s ease;
+}
+.todolist-itemi .todo-item{
+	padding: 0rem 0.5rem;
+}
+.todolist-itemi .todo li{
+	flex: 1;
+}
+.todolist-itemi .trash-btn,
+.completed-btn{
+	background: #545454;
+	color: white;
+	border: none;
+	padding: 0.5rem;
+	cursor: pointer;
+	font-size: 1.3rem;
+}
+.todolist-itemi .fa-trash,
+.fa-check{
+	pointer-events: none;
+}
+.todolist-itemi .completed{
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+.todolist-itemi .fall{
+	transform: translateY(8rem) rotateZ(20deg);
+	opacity: 0;
+}
+
+
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1300px) {
+    .Anasayfa .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .Hakkımızda .Hakkımızda-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+    .Ürünümüz .container {
+        width: 80rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .Ürünümüz .container {
+        width: 59rem;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .Anasayfa .Anasayfa-content .text-2{
+        font-size: 70px;
+    }
+    .Anasayfa .Anasayfa-content .text-3{
+        font-size: 35px;
+    }
+    .Anasayfa .Anasayfa-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .Hakkımızda .Hakkımızda-content .column{
+        width: 100%;
+    }
+    .Hakkımızda .Hakkımızda-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .Hakkımızda .Hakkımızda-content .right{
+        flex: 100%;
+    }
+    .Kalitemiz .serv-content .card1{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .Ürünümüz .Ürünümüz-content .column,
+    .İletişim .İletişim-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .todolist-itemi{
+        width: 60%;
+        padding: 90px;
+    }
+    .todolist-itemi form button{
+        position: relative;
+        left: 10rem;
+        bottom: 137px;
+    }
+    .Ürünümüz .container {
+        width: 58rem;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .Anasayfa .Anasayfa-content .text-2{
+        font-size: 60px;
+    }
+    .Anasayfa .Anasayfa-content .text-3{
+        font-size: 32px;
+    }
+    .Anasayfa .Anasayfa-content a{
+        font-size: 20px;
+    }
+    .Kalitemiz .serv-content .card1{
+        width: 100%;
+    }
+    .todolist-itemi{
+        width: 60%;
+        padding: 90px;
+    }
+    .todolist-itemi form button{
+        position: relative;
+        left: 10rem;
+        bottom: 137px;
+    }
+    .Ürünümüz .container {
+        width: 41rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .Anasayfa .Anasayfa-content .text-2{
+        font-size: 50px;
+    }
+    .Anasayfa .Anasayfa-content .text-3{
+        font-size: 27px;
+    }
+    .Hakkımızda .Hakkımızda-content .right .text,
+    .Ürünümüz .Ürünümüz-content .left .text{
+        font-size: 19px;
+    }
+    .todolist-itemi{
+        width: 90%;
+        padding: 90px;
+    }
+    .todolist-itemi form button{
+        position: relative;
+        left: 9rem;
+        bottom: 137px;
+    }
+    .Ürünümüz .container {
+        width: 13rem;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
